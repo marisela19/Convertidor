@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class frmCambio : Form
+    {
+        public frmCambio()
+        {
+            InitializeComponent();
+            
+        }
+
+        private void cmdCalcular_Click(object sender, EventArgs e)
+        {
+            //Variables
+            double d, p, c;
+			
+			try 
+				{
+				//Asignacion de valores
+				
+				c = System.Double.Parse(lblres.Text);
+				p = System.Double.Parse(txtPeso.Text);
+
+				//Calcular
+
+				d = p * c;
+				
+				//Compara si es un 0
+				
+				if(d == 0){
+					MessageBox.Show("Hey no convierto "+ d);
+				}else{
+					MessageBox.Show("Tu resultado en Dolares es: "+ d);
+				}
+
+				//Mostrar Resultados
+
+				txtDolares.Text = d.ToString();
+				MessageBox.Show("Gracias por usar este conversor  o.O");
+				
+			// Mensaje que cacha el error como si dejas 
+			//vacios los campos o pones letras o simbolos raros
+			
+			}catch(Exception h)
+				{
+					MessageBox.Show("\n:( \n\n"+
+				          		"No Acepto campos vacios ni letras ni simbolos raros\n\n"+
+				                "Exception: " + h.Message);
+				}
+        }
+
+        private void cmdLimpiar_Click(object sender, EventArgs e)
+        {
+            //Limpiar casillas y resultado.
+
+            MessageBox.Show("Limpios los camos -.-");
+            txtPeso.Clear();
+            txtDolares.Clear();
+
+            lblres.ResetText();
+        }
+
+        private void cmdSalida_Click(object sender, EventArgs e)
+        {
+            //cerrar programa
+            
+            MessageBox.Show("Vámonos a las chelas pues :)");
+            Close();
+        }
+        
+        void LblresTextChanged(object sender, EventArgs e)
+        {
+        	
+        }
+    }
+}
