@@ -23,39 +23,181 @@ namespace WindowsFormsApplication1
 
 //Form1 designer
 
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
+namespace WindowsFormsApplication1
+{
+    partial class frmCambio
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("WindowsFormsApplication1")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WindowsFormsApplication1")]
-[assembly: AssemblyCopyright("Copyright ©  2011")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-// Setting ComVisible to false makes the types in this assembly not visible 
-// to COM components.  If you need to access a type in this assembly from 
-// COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(false)]
+        #region Windows Form Designer generated code
 
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("252485bf-4036-4a88-8489-ed59bbdfab00")]
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+        	this.lblDolares = new System.Windows.Forms.Label();
+        	this.lblPeso = new System.Windows.Forms.Label();
+        	this.lblCambio = new System.Windows.Forms.Label();
+        	this.txtDolares = new System.Windows.Forms.TextBox();
+        	this.txtPeso = new System.Windows.Forms.TextBox();
+        	this.cmdCalcular = new System.Windows.Forms.Button();
+        	this.cmdLimpiar = new System.Windows.Forms.Button();
+        	this.cmdSalida = new System.Windows.Forms.Button();
+        	this.label1 = new System.Windows.Forms.Label();
+        	this.lblres = new System.Windows.Forms.TextBox();
+        	this.label2 = new System.Windows.Forms.Label();
+        	this.SuspendLayout();
+        	// 
+        	// lblDolares
+        	// 
+        	this.lblDolares.AutoSize = true;
+        	this.lblDolares.Location = new System.Drawing.Point(12, 75);
+        	this.lblDolares.Name = "lblDolares";
+        	this.lblDolares.Size = new System.Drawing.Size(46, 13);
+        	this.lblDolares.TabIndex = 0;
+        	this.lblDolares.Text = "Dolares:";
+        	// 
+        	// lblPeso
+        	// 
+        	this.lblPeso.AutoSize = true;
+        	this.lblPeso.Location = new System.Drawing.Point(118, 36);
+        	this.lblPeso.Name = "lblPeso";
+        	this.lblPeso.Size = new System.Drawing.Size(84, 13);
+        	this.lblPeso.TabIndex = 1;
+        	this.lblPeso.Text = "Tipo de Cambio:";
+        	// 
+        	// lblCambio
+        	// 
+        	this.lblCambio.AutoSize = true;
+        	this.lblCambio.Location = new System.Drawing.Point(12, 36);
+        	this.lblCambio.Name = "lblCambio";
+        	this.lblCambio.Size = new System.Drawing.Size(39, 13);
+        	this.lblCambio.TabIndex = 2;
+        	this.lblCambio.Text = "Pesos:";
+        	// 
+        	// txtDolares
+        	// 
+        	this.txtDolares.Enabled = false;
+        	this.txtDolares.Location = new System.Drawing.Point(12, 91);
+        	this.txtDolares.Name = "txtDolares";
+        	this.txtDolares.Size = new System.Drawing.Size(77, 20);
+        	this.txtDolares.TabIndex = 4;
+        	this.txtDolares.Text = "0";
+        	// 
+        	// txtPeso
+        	// 
+        	this.txtPeso.Location = new System.Drawing.Point(12, 52);
+        	this.txtPeso.Name = "txtPeso";
+        	this.txtPeso.Size = new System.Drawing.Size(77, 20);
+        	this.txtPeso.TabIndex = 5;
+        	// 
+        	// cmdCalcular
+        	// 
+        	this.cmdCalcular.Location = new System.Drawing.Point(118, 91);
+        	this.cmdCalcular.Name = "cmdCalcular";
+        	this.cmdCalcular.Size = new System.Drawing.Size(77, 20);
+        	this.cmdCalcular.TabIndex = 6;
+        	this.cmdCalcular.Text = "Convertir ";
+        	this.cmdCalcular.UseVisualStyleBackColor = true;
+        	this.cmdCalcular.Click += new System.EventHandler(this.cmdCalcular_Click);
+        	// 
+        	// cmdLimpiar
+        	// 
+        	this.cmdLimpiar.Location = new System.Drawing.Point(12, 126);
+        	this.cmdLimpiar.Name = "cmdLimpiar";
+        	this.cmdLimpiar.Size = new System.Drawing.Size(74, 24);
+        	this.cmdLimpiar.TabIndex = 7;
+        	this.cmdLimpiar.Text = "Limpiar";
+        	this.cmdLimpiar.UseVisualStyleBackColor = true;
+        	this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
+        	// 
+        	// cmdSalida
+        	// 
+        	this.cmdSalida.Location = new System.Drawing.Point(118, 126);
+        	this.cmdSalida.Name = "cmdSalida";
+        	this.cmdSalida.Size = new System.Drawing.Size(74, 24);
+        	this.cmdSalida.TabIndex = 8;
+        	this.cmdSalida.Text = "Salida";
+        	this.cmdSalida.UseVisualStyleBackColor = true;
+        	this.cmdSalida.Click += new System.EventHandler(this.cmdSalida_Click);
+        	// 
+        	// label1
+        	// 
+        	this.label1.AutoSize = true;
+        	this.label1.Location = new System.Drawing.Point(86, 164);
+        	this.label1.Name = "label1";
+        	this.label1.Size = new System.Drawing.Size(131, 13);
+        	this.label1.TabIndex = 9;
+        	this.label1.Text = "Sigo siendo de Internet ¬¬";
+        	// 
+        	// lblres
+        	// 
+        	this.lblres.Location = new System.Drawing.Point(118, 52);
+        	this.lblres.Name = "lblres";
+        	this.lblres.Size = new System.Drawing.Size(77, 20);
+        	this.lblres.TabIndex = 10;
+        	this.lblres.TextChanged += new System.EventHandler(this.LblresTextChanged);
+        	// 
+        	// label2
+        	// 
+        	this.label2.Location = new System.Drawing.Point(29, 13);
+        	this.label2.Name = "label2";
+        	this.label2.Size = new System.Drawing.Size(141, 23);
+        	this.label2.TabIndex = 11;
+        	this.label2.Text = "Cambio de Pesos a Dolares";
+        	// 
+        	// frmCambio
+        	// 
+        	this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+        	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        	this.ClientSize = new System.Drawing.Size(224, 186);
+        	this.Controls.Add(this.label2);
+        	this.Controls.Add(this.lblres);
+        	this.Controls.Add(this.label1);
+        	this.Controls.Add(this.cmdSalida);
+        	this.Controls.Add(this.cmdLimpiar);
+        	this.Controls.Add(this.cmdCalcular);
+        	this.Controls.Add(this.txtPeso);
+        	this.Controls.Add(this.txtDolares);
+        	this.Controls.Add(this.lblCambio);
+        	this.Controls.Add(this.lblPeso);
+        	this.Controls.Add(this.lblDolares);
+        	this.Name = "frmCambio";
+        	this.Text = "Cambio :D";
+        	this.ResumeLayout(false);
+        	this.PerformLayout();
+        }
+        private System.Windows.Forms.Label label2;
 
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Build and Revision Numbers 
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+        #endregion
+
+        private System.Windows.Forms.Label lblDolares;
+        private System.Windows.Forms.Label lblPeso;
+        private System.Windows.Forms.Label lblCambio;
+        private System.Windows.Forms.TextBox lblres;
+        private System.Windows.Forms.TextBox txtDolares;
+        private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.Button cmdCalcular;
+        private System.Windows.Forms.Button cmdLimpiar;
+        private System.Windows.Forms.Button cmdSalida;
+        private System.Windows.Forms.Label label1;
+    }
+}
